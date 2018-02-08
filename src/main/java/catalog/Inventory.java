@@ -12,7 +12,7 @@ import javax.validation.constraints.NotNull;
 public class Inventory {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationTYpe.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	
 	@NotNull
@@ -30,7 +30,7 @@ public class Inventory {
 	@NotNull
 	private String img;
 	
-	@NotNul
+	@NotNull
 	private int stock;
 	
 	public Inventory(long id) {

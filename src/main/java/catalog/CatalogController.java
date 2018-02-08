@@ -36,7 +36,7 @@ InventoryRepo itemsRepo;
      */
     @RequestMapping(value = "/items/{id}", method = RequestMethod.GET)
     ResponseEntity<?> getById(@PathVariable long id) {
-    	if(!itemsRepoexists(id)) {
+    	if(!itemsRepo.exists(id)) {
     		return ResponseEntity.notFound().build();
     	}
          return ResponseEntity.ok(itemsRepo.findOne(id));
