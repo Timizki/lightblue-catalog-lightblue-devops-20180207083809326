@@ -28,7 +28,7 @@ InventoryRepo itemsRepo;
     @RequestMapping(value = "/items", method = RequestMethod.GET)
     @ResponseBody
     ResponseEntity<?> getInventory() {
-        return itemsRepo.findAll();
+        return ResponseEntity.ok(itemsRepo.findAll());
         }
 
     /**
